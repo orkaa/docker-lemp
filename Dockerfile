@@ -3,7 +3,6 @@ FROM stackbrew/debian:wheezy
 RUN echo "deb http://ftp.de.debian.org/debian/ wheezy non-free contrib" >> /etc/apt/sources.list
 RUN apt-get update
 
-# install nginx and php5 and mysql
 RUN DEBIAN_FRONTEND=noninteractive apt-get -qy install nginx php5-fpm php5-mysql php5-gd php5-intl php5-imagick php5-mcrypt php5-curl php5-cli git mysql-server supervisor postfix
 RUN apt-get -qy clean
 
